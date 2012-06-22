@@ -1,1 +1,7 @@
 target/
+.project
+.classpath
+bin
+.settings
+/source/.metadata
+/presentation/Thumbs.db
