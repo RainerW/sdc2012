@@ -7,7 +7,7 @@ import de.bitnoise.sdc2012.model.Right;
 import de.bitnoise.sdc2012.model.Window;
 
 public aspect Security {
-	pointcut fensterOpen() : execution(* Window2.open(..) );
+	pointcut fensterOpen() : execution(* Window.open(..) );
 
 	Logger log = Logger.getLogger(Security.class);
 
@@ -17,7 +17,7 @@ public aspect Security {
 	}
 
 	// after, after returning, after throwing
-	after(Window _this) : fensterOpen() && this(_this) {
+	after(Window _this) returning : fensterOpen() && this(_this) {
 		log.info("open() : after " + _this.toString());
 	}
 }

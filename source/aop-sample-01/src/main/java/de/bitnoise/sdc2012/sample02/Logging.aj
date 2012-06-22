@@ -11,8 +11,7 @@ import de.bitnoise.sdc2012.model.DefaultWindow;
 
 public aspect Logging {
 
-	public interface HasLogger {
-	}
+	public interface HasLogger {}
 
 	public Logger HasLogger.log;
 
